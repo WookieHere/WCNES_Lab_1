@@ -51,6 +51,11 @@ implementation
 		if(result == SUCCESS)
 		{
 			printf("Current temp is: %d \r\n", data);
+			if((int)data > 6240)
+			{
+				call Leds.led2Toggle();
+				call Leds.led0Toggle();
+			}
 		}
 		else
 		{
